@@ -103,7 +103,7 @@ public class Automovil {
         if (velocidadActual + incrementoVelocidad <= velocidadMaxima) {
             velocidadActual += incrementoVelocidad;
         } else {
-            System.out.println("No se puede incrementar a una velocidad superior a la máxima del automóvil. Se ha generado una multa.");
+            System.out.println("si pasa la velocidad maxima del automovil se genera una multa.");
             velocidadActual = velocidadMaxima;
             multas++;
         }
@@ -113,7 +113,7 @@ public class Automovil {
         if (velocidadActual - decrementoVelocidad >= 0) {
             velocidadActual -= decrementoVelocidad;
         } else {
-            System.out.println("No se puede decrementar a una velocidad inferior a 0");
+            System.out.println("no se puede ia a velocidad inferior a 0");
             velocidadActual = 0;
         }
     }
@@ -126,7 +126,7 @@ public class Automovil {
         if (velocidadActual > 0) {
             return (double) distancia / velocidadActual;
         } else {
-            System.out.println("El automóvil está detenido. No se puede calcular el tiempo de llegada.");
+            System.out.println("El automovil esta parado no se puede calcular el tiempo de la llegada.");
             return -1;
         }
     }
