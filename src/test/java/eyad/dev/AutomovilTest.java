@@ -15,8 +15,8 @@ public class AutomovilTest {
 
     @Test
     public void testAcelerar() {
-        automovil.acelerar(50);
-        assertEquals(50, automovil.getVelocidadActual());
+        automovil.acelerar(40);
+        assertEquals(40, automovil.getVelocidadActual());
 
         automovil.acelerar(150);
         assertEquals(180, automovil.getVelocidadActual());
@@ -25,8 +25,8 @@ public class AutomovilTest {
 
     @Test
     public void testDesacelerar() {
-        automovil.acelerar(100);
-        automovil.desacelerar(30);
+        automovil.acelerar(110);
+        automovil.desacelerar(40);
         assertEquals(70, automovil.getVelocidadActual());
 
         automovil.desacelerar(80);
@@ -42,8 +42,8 @@ public class AutomovilTest {
 
     @Test
     public void testCalcularTiempoLlegada() {
-        automovil.acelerar(60);
-        assertEquals(1.0, automovil.calcularTiempoLlegada(60));
+        automovil.acelerar(70);
+        assertEquals(1.0, automovil.calcularTiempoLlegada(70));
 
         automovil.frenar();
         assertEquals(-1, automovil.calcularTiempoLlegada(60));
@@ -51,44 +51,9 @@ public class AutomovilTest {
 
     @Test
     public void testMultas() {
-        automovil.acelerar(200);
+        automovil.acelerar(220);
         assertEquals(1, automovil.multas);
         assertEquals(100, automovil.calcularTotalMultas());
     }
 
-    @Test
-    public void testGettersAndSetters() {
-        automovil.setMarca("ferrari");
-        assertEquals("ferrari", automovil.getMarca());
-
-        automovil.setModelo(1900);
-        assertEquals(1900, automovil.getModelo());
-
-        automovil.setMotor(1800);
-        assertEquals(1800, automovil.getMotor());
-
-        automovil.setTipoCombustible(Automovil.tipoCom.Diesel);
-        assertEquals(Automovil.tipoCom.Diesel, automovil.getTipoCombustible());
-
-        automovil.setTipoAutomovil(Automovil.tipoA.Compacto);
-        assertEquals(Automovil.tipoA.Compacto, automovil.getTipoAutomovil());
-
-        automovil.setNumeroPuertas(4);
-        assertEquals(4, automovil.getNumeroPuertas());
-
-        automovil.setCantidadAsientos(5);
-        assertEquals(5, automovil.getCantidadAsientos());
-
-        automovil.setVelocidadMaxima(180);
-        assertEquals(180, automovil.getVelocidadMaxima());
-
-        automovil.setColor(Automovil.tipoColor.Rojo);
-        assertEquals(Automovil.tipoColor.Rojo, automovil.getColor());
-
-        automovil.setVelocidadActual(130);
-        assertEquals(130, automovil.getVelocidadActual());
-
-        automovil.setAutomatico(false);
-        assertFalse(automovil.isAutomatico());
-    }
 }

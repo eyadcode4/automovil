@@ -113,7 +113,7 @@ public class Automovil {
         if (velocidadActual - decrementoVelocidad >= 0) {
             velocidadActual -= decrementoVelocidad;
         } else {
-            System.out.println("no se puede ia a velocidad inferior a 0");
+            System.out.println("no se puede ir a velocidad inferior a 0");
             velocidadActual = 0;
         }
     }
